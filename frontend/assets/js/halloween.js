@@ -138,7 +138,7 @@
 			isActiveWindow = true,
 			bats = [],
 			defaults = {
-				image: 'assets/bats.png', // Path to the image.
+				image: 'assets/img/bats.webp', // Path to the image.
 				zIndex: 10000, // The z-index you need.
 				amount: 5, // Bat amount.
 				width: 35, // Image width.

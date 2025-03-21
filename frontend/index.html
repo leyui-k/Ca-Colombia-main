@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" href="assets/img/asd.png" type="image/png">
+    <link rel="icon" href="assets/img/asd.webp" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CA Colombia</title>
@@ -13,9 +13,9 @@
 
 <body>
 <!-- Header -->
-    <header>
+    <header class="gray">
         <div class="titulo">
-            <a href="https://discord.gg/cacolombiarp" target="_blank"><img id="logo" src="assets/img/asd.png"></a>
+            <a href="https://discord.gg/cacolombiarp" target="_blank"><img loading="lazy" id="logo" src="assets/img/asd.webp"></a>
             <ul>
                 <h1>CA COLOMBIA</h1>
                 <p>ER:LC RP</p>
@@ -38,7 +38,7 @@
                     <path class="line" d="M7 16 27 16"></path>
                 </svg>
             </label>
-            <div class="dd-header-contenido" id="dd-header">
+            <div class="dd-header-contenido gray" id="dd-header">
                 <p><a href="https://discord.com/channels/1042099714608345159/1042099719041720397" target="_blank">Dudas</a></p>
                 <p><a href="https://discord.com/channels/1042099714608345159/1344372295275253861/1344372346311675937" target="_blank">Redes</a></p>
                 <p><a href="https://discord.com/channels/1042099714608345159/1042099719041720395" target="_blank">Contacto</a></p>
@@ -49,55 +49,54 @@
         <!-- <label class="tema">
             <input type="checkbox" id="halloweenTema">
             <span class="slider">
-                <img src="assets/img/pumpkin.png" alt="Calabaza" class="pumpkin-icon">
+                <img loading="lazy" src="assets/img/pumpkin.webp" alt="Calabaza" class="pumpkin-icon">
             </span>
         </label>  -->
 
     </header>
 
 <!-- Banner -->
-    <div class="banner-container">
-        <img src="assets/img/BANNER4.png" alt="Banner">
+    <div class="banner-container gray">
+        <img loading="lazy" src="assets/img/BANNER4.webp" alt="Banner">
         <div class="banner-text">
             <h1>CA Colombia ER:LC</h1>
             <p>TOP 1 | Roleplay en Colombia</p>
             <div class="banner-btn">
-                <div class="miembros">
+                <div class="miembros gray">
                     <ul>
-                        <li class="blinker"></li>
+                        <li class="blinker radius-circle"></li>
                         <h2 id="miembros"></h2>
                     </ul>
                 </div>
-                <a href="https://discord.gg/cacolombiarp" target="_blank" id="discord">Discord</a>
+                <a class="gray" href="https://discord.gg/cacolombiarp" target="_blank" id="discord">Discord</a>
             </div>
         </div>
     </div>
 
 <!-- Barra navegacion -->
-    <nav>
+    <nav class="gray">
         <ul>
             <li><a href="/police-page.html" target="_blank">
-                <img src="assets/img/ponal.png" id="ponal"> </a></li>
+                <img loading="lazy" class="radius-circle" src="assets/img/ponal.webp" id="ponal"> </a></li>
             <li><a href="https://www.cacolombia.com/cti-page/" target="_blank">
-                <img src="assets/img/cti.png" id="cti"> </a></li>
+                <img loading="lazy" class="radius-circle" src="assets/img/cti.webp" id="cti"> </a></li>
             <li><a href="./bombero/index.html" target="_blank">
-                <img src="assets/img/bombero.png" id="bomberos"> </a></li>
+                <img loading="lazy" loading="lazy" class="radius-circle" src="assets/img/bombero.webp" id="bomberos"> </a></li>
             <li><a href="/v1/runt/login" target="_blank">
-                <img src="assets/img/runt.png" id="runt"> </a></li>
+                <img loading="lazy" class="radius-circle" src="assets/img/runt.webp" id="runt"> </a></li>
         </ul>
         
         <div class="redes-btn">
             <label class="menu">
                 <input type="checkbox" onclick="toggleRedeDropdown()">
-                <p id="redes" class="redes">Redes 
+                <p id="redes" class="redes white">Redes 
                     <svg class="redes-icon" viewBox="0 0 64 64"><path fill="black" d="M 32.4113,38C 32.4113,38.1309 32.3817,38.2533 32.3742,38.3843L 45.9897,45.1862C 47.1549,44.2024 48.6467,43.586 50.2943,43.586C 53.9978,43.586 57,46.588 57,50.2909C 57,53.998 53.9978,57 50.2943,57C 46.5871,57 43.5887,53.998 43.5887,50.2909C 43.5887,50.1558 43.6183,50.0376 43.6258,49.9067L 30.0103,43.1047C 28.8414,44.0843 27.3533,44.7007 25.7056,44.7007C 22.0021,44.7007 19,41.7029 19,38C 19,34.2929 22.0021,31.2909 25.7056,31.2909C 27.3533,31.2909 28.8414,31.9116 30.0103,32.8954L 43.6258,26.0891C 43.6183,25.9582 43.5887,25.8358 43.5887,25.7007C 43.5887,22.002 46.5871,19 50.2943,19C 53.9978,19 57,22.002 57,25.7007C 57,29.4078 53.9978,32.4098 50.2943,32.4098C 48.6429,32.4098 47.1549,31.7934 45.9897,30.8053L 32.3742,37.6158C 32.3817,37.7425 32.4113,37.8649 32.4113,38 Z "></path></svg>
                 </p>
             </label>
-
-            <div class="redes-dropdown" id="redes-dropdown">
+            <div class="redes-dropdown gray" id="redes-dropdown">
                 <div class="redes-content">
                     <li class="icon-content">
-                      <a href="https://www.tiktok.com/@cacolombiarp" aria-label="tiktok" data-social="tiktok" target="_blank">
+                      <a class="white radius-circle" href="https://www.tiktok.com/@cacolombiarp" aria-label="tiktok" data-social="tiktok" target="_blank">
                         <div class="filled"></div>
                         <svg fill="currentColor" viewBox="0 0 32 32" width="16" height="16">
                           <path 
@@ -109,8 +108,7 @@
                     </li>
 
                     <li class="icon-content">
-                      <a
-                        href="https://www.roblox.com/communities/16644979/CA-Colombia#!/about" aria-label="grupo" data-social="grupo" target="_blank">
+                      <a class="white radius-circle" href="https://www.roblox.com/communities/16644979/CA-Colombia#!/about" aria-label="grupo" data-social="grupo" target="_blank">
                         <div class="filled"></div>
                         <svg fill="currentColor" width="16" height="16" viewBox="0 0 200 200">
                             <g transform="rotate(20, 100, 100)">
@@ -122,7 +120,7 @@
                     </li>
                     
                     <li class="icon-content">
-                      <a href="https://www.youtube.com/@cacolombiarp" aria-label="Youtube" data-social="youtube" target="_blank">
+                      <a class="white radius-circle" href="https://www.youtube.com/@cacolombiarp" aria-label="Youtube" data-social="youtube" target="_blank">
                         <div class="filled"></div>
                         <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                           <path
@@ -141,9 +139,9 @@
     <div class="contenido">
         <section class="perfiles">
             <div class="perfil-caja">
-                <div class="perfil-imagen">
+                <div class="perfil-imagen radius-circle">
                     <a href="https://www.roblox.com/users/312978547/profile" target="_blank">
-                    <img id="avatar1" src="" alt="LeYuiKa"></a>
+                    <img loading="lazy" id="avatar1" src="" alt="LeYuiKa"></a>
                 </div>
                 <p class="perfil-info">LeYuiKa
                     <span>Dev</span>
@@ -165,9 +163,9 @@
             </div>
 
             <div class="perfil-caja">
-                <div class="perfil-imagen">
+                <div class="perfil-imagen radius-circle">
                     <a href="https://www.roblox.com/users/3599982581/profile" target="_blank">
-                    <img id="avatar4" src="" alt="Blade"></a>
+                    <img loading="lazy" id="avatar4" src="" alt="Blade"></a>
                 </div>
                 <p class="perfil-info">Blad3r
                     <span>Dev</span>
@@ -188,9 +186,9 @@
             </div>
 
             <div class="perfil-caja">
-                <div class="perfil-imagen">
+                <div class="perfil-imagen radius-circle">
                     <a href="https://www.roblox.com/users/1413431128/profile" target="_blank">
-                    <img id="avatar2" src="" alt="Propoli"></a>
+                    <img loading="lazy" id="avatar2" src="" alt="Propoli"></a>
                 </div>
                 <p class="perfil-info">Santiago Restrepo
                     <span>Fundador</span>
@@ -205,9 +203,9 @@
             </div>
 
             <div class="perfil-caja">
-                <div class="perfil-imagen">
+                <div class="perfil-imagen radius-circle">
                     <a href="https://www.roblox.com/users/835636047/profile" target="_blank">
-                    <img id="avatar3" src="" alt="Joses"></a>
+                    <img loading="lazy" id="avatar3" src="" alt="Joses"></a>
                 </div>
                 <p class="perfil-info">Joses
                     <span>Co-Fundador</span>
@@ -225,7 +223,7 @@
 
         <div class="principal">
             <ul class="ul-1">
-                <div id="trabajos" class="swiper-container">
+                <div id="trabajos" class="swiper-container gray">
                         <h1>TRABAJOS</h1>
                         <p>Basado en el canal de mintrabajos</p>
                         <div class="swiper-trabajos">
@@ -233,49 +231,49 @@
                                 <div class="swiper-slide">
                                     <h3>Paramedico</h3>
                                     <p>Hospital</p>
-                                    <img src="assets/img/sura.png" alt="Paramedico">
+                                    <img loading="lazy" src="assets/img/sura.webp" alt="Paramedico">
                                     <a href="https://discord.gg/PmK9wBJwVm?dhc-id=81853813656391729" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Mecanico</h3>
                                     <p>Zona de mecanicos</p>
-                                    <img src="assets/img/meca.png" alt="Mecanico">
+                                    <img loading="lazy" src="assets/img/meca.webp" alt="Mecanico">
                                     <a href="https://discord.gg/CSq7CPFsGW?dhc-id=81854734285148174" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Taxi / Bus</h3>
                                     <p>Zona de taxi</p>
-                                    <img src="assets/img/taxi1.png" alt="Taxi / Bus">
+                                    <img loading="lazy" src="assets/img/taxi.webp" alt="Taxi / Bus">
                                     <a href="https://discord.gg/qpcQfHSMdJ?dhc-id=81855145121419291" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Abogado</h3>
                                     <p>Juego externo</p>
-                                    <img src="assets/img/juez.png" alt="Abogado">
+                                    <img loading="lazy" src="assets/img/juez.webp" alt="Abogado">
                                     <a href="https://discord.gg/jBy2fZypcC?dhc-id=81855433911832679" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Periodista</h3>
                                     <p>Zona de noticiero</p>
-                                    <img src="assets/img/rcn.png" alt="Periodista">
+                                    <img loading="lazy" src="assets/img/rcn.webp" alt="Periodista">
                                     <a href="https://discord.gg/E6T8mYsf3W?dhc-id=81855775722442823" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Alcaldia</h3>
                                     <p>Juego externo</p>
-                                    <img src="assets/img/alcaldia.jpg" alt="Alcaldia">
+                                    <img loading="lazy" src="assets/img/alcaldia.webp" alt="Alcaldia">
                                     <a href="https://discord.com/invite/aawbmeWAFs?dhc-id=81856115804999761" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Guardia</h3>
                                     <p>Prision</p>
-                                    <img src="assets/img/inpec.png" alt="Guardia">
+                                    <img loading="lazy" src="assets/img/inpec.webp" alt="Guardia">
                                     <a href="https://discord.com/invite/bMYJTJ7dSX?dhc-id=81856435675205748" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Bombero</h3>
                                     <p>Zona de bomberos</p>
-                                    <img src="assets/img/bombero.png" alt="Bombero">
+                                    <img loading="lazy" src="assets/img/bombero.webp" alt="Bombero">
                                     <a href="https://discord.com/invite/Nudd4PvkC5?dhc-id=81856770351304723" target="_blank">Más información</a>
                                 </div>
                             </div>
@@ -283,62 +281,62 @@
                     <div class="swiper-pagination-trabajos"></div>
                 </div>
                     
-                <div id="empresas" class="swiper-container hidden">
+                <div id="empresas" class="swiper-container hidden gray">
                         <h1>EMPRESAS</h1>
                         <p>Basado en el canal de empresas</p>
                         <div class="swiper-empresas">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <h3>Bancolombia</h3>
-                                    <img src="assets/img/banco.png" alt="Bancolombia">
+                                    <img loading="lazy" src="assets/img/banco.webp" alt="Bancolombia">
                                     <p class="empresa" data-completo="Ofrecemos empleos seguros en donde no necesitas tener mucha experiencia, una guía completa acerca de tus labores, hacemos sorteos y eventos que benefician a todos!">Ofrecemos empleos seguros en donde no necesitas tener mucha experiencia</p>
                                     <a href="https://discord.gg/VCuwg6kv5m" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Loterias Caribe</h3>
-                                    <img src="assets/img/loterias.png" alt="Loterias">
+                                    <img loading="lazy" src="assets/img/loterias.webp" alt="Loterias">
                                     <p class="empresa">Pa salir mondad en plata.</p>
                                     <a href="https://discord.gg/rxx5sSMFNX" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>El Valle Verde</h3>
-                                    <img src="assets/img/valle.png" alt="Valle">
+                                    <img loading="lazy" src="assets/img/valle.webp" alt="Valle">
                                     <p class="empresa">Propiedad de xsabilax.</p>
                                     <a href="https://discord.gg/UEegjbkaae" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Patriots & Co</h3>
-                                    <img src="assets/img/patriots.png" alt="Patriots">
+                                    <img loading="lazy" src="assets/img/patriots.webp" alt="Patriots">
                                     <p class="empresa">Propiedad de Gistenk_0 | Alex280.</p>
                                     <a href="https://discord.gg/SgpFtatS7R" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Shell</h3>
-                                    <img src="assets/img/shell.png" alt="Shell">
+                                    <img loading="lazy" src="assets/img/shell.webp" alt="Shell">
                                     <p class="empresa">Propiedad de bebelag</p>
                                     <a href="https://discord.gg/HJUurqfhg3" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>A.C.T Industries</h3>
-                                    <img src="assets/img/act.png" alt="ACT">
+                                    <img loading="lazy" src="assets/img/act.webp" alt="ACT">
                                     <p class="empresa" data-completo="Proveer productos de seguridad a los civiles y fuerzas gubernamentales relacionados con el segmento de seguridad.">Proveer productos de seguridad a los civiles y</p>
                                     <a href="https://discord.gg/zzNDppbczH" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Inka Armored</h3>
-                                    <img src="assets/img/inka.png" alt="Inka">
+                                    <img loading="lazy" src="assets/img/inka.webp" alt="Inka">
                                     <p class="empresa" data-completo="Ayuda a proveer seguridad privada y blindajes para vehículos, garantizamos tu vida en caso de atentados. Unete que tenemos los mejores precios!">Ayuda a proveer seguridad privada y blindajes para vehículos, garantizamos</p>
                                     <a href="" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>El Dragón Rojo</h3>
-                                    <img src="assets/img/dragon.png" alt="Dragon">
+                                    <img loading="lazy" src="assets/img/dragon.webp" alt="Dragon">
                                     <p class="empresa">Propiedad de dracarme.</p>
                                     <a href="https://discord.gg/vUeYvDcjZJ" target="_blank">Más información</a>
                                 </div>
                                 <div class="swiper-slide">
                                     <h3>Forza Horizon</h3>
-                                    <img src="assets/img/forza.png" alt="Forza">
+                                    <img loading="lazy" src="assets/img/forza.webp" alt="Forza">
                                     <p class="empresa">Propiedad de joshua27.</p>
                                     <a href="https://discord.gg/hhvFFDzZSY" target="_blank">Más información</a>
                                 </div>
@@ -350,20 +348,20 @@
 
             <ul class="ul-2">
                 <div class="li-2">
-                    <div class="caja-evento">
+                    <div class="caja-evento gray">
                         <section id="evento">
                             <h1>EVENTOS</h1>
                             <p>Basado en el canal de eventos</p>
                             <div class="evento" id="e-1">
                                 <h3>Servidor Abierto para Todos</h3>
-                                <!-- <img href="" src="assets/img/CA_TOUR.png"> -->
+                                <!-- <img loading="lazy" href="" src="assets/img/CA_TOUR.webp"> -->
                                 <p>El servidor está abierto y listo para que entres a jugar y formes parte de esta hermosa comunidad.</p>  
                                 <a href="https://discord.com/channels/1042099714608345159/1042099719322734691" target="_blank">Unete ya</a> 
                             </div>
                             <div class="evento" id="e-2">
                                 <h3>Centro Comunitario</h3>
                                 <p>Fecha: 26 de Marzo</p>
-                                <img src="assets/img/e-2.png">
+                                <img loading="lazy" src="assets/img/e-2.webp">
                                 <p>Tomar fotografiías de alta calidad dentro de CA Colombia para promocionar el centro comunitario.</p>
                                 <p><small>Unicamente para staff, empresarios y jefes departamentos.</small></p>  
                                 <a href="https://discord.com/channels/1042099714608345159/1042099719322734691/1352068390386270278" target="_blank">Más información</a>
@@ -371,19 +369,19 @@
                         </section>
                     </div>
 
-                    <div class="caja-evento" id="tutorial">
+                    <div class="caja-evento gray" id="tutorial">
                         <h1>¿COMO JUGAR?</h1>
                             <div class="evento" id="tutorial">
                                 <div class="swiper-videos">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <a href="https://www.youtube.com/@cacolombiarp/videos" target="_blank"><h3>CEDULA</h3></a>
-                                            <iframe src="https://www.youtube.com/embed/R5d2BrbhHrk?rel=0" frameborder="0" allowfullscreen></iframe>
+                                            <iframe loading="lazy" src="https://www.youtube.com/embed/R5d2BrbhHrk?rel=0" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                         
                                         <div class="swiper-slide">
                                             <a href="https://www.youtube.com/@cacolombiarp/videos" target="_blank"><h3>EXPERIENCIA</h3></a>
-                                            <iframe src="https://www.youtube.com/embed/Eyl1RZjNAJc?rel=0" frameborder="0" allowfullscreen></iframe>
+                                            <iframe loading="lazy" src="https://www.youtube.com/embed/Eyl1RZjNAJc?rel=0" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 </div>
@@ -395,9 +393,9 @@
 
             <ul class="ul-3">
                 <div class="li-3">
-                    <div class="card">
-                        <img src="assets/img/roleplay.png">
-                        <div class="card__content">
+                    <div class="card gray">
+                        <img loading="lazy" src="assets/img/roleplay.webp">
+                        <div class="card__content white">
                         <p class="card__title">Roleplay</p>
                         <p class="card__description">
                             ¿Estás listo para vivir una experiencia única de roleplay? Aquí encontrarás un mundo lleno de
@@ -407,9 +405,9 @@
                         </div>
                     </div>
         
-                    <div class="card">
-                        <img src="assets/img/experiencias.png">
-                        <div class="card__content">
+                    <div class="card gray">
+                        <img loading="lazy" src="assets/img/experiencias.webp">
+                        <div class="card__content white">
                         <p class="card__title">Experiencias</p>
                         <p class="card__description">
                             Sumérgete en un mundo donde cada momento cuenta y cada historia es única. En nuestro servidor de ER:LC
@@ -419,9 +417,9 @@
                         </div>
                     </div>
         
-                    <div class="card">
-                        <img src="assets/img/sistemas.jpg">
-                        <div class="card__content">
+                    <div class="card gray">
+                        <img loading="lazy" src="assets/img/sistemas.webp">
+                        <div class="card__content white">
                         <p class="card__title">Sistemas</p>
                         <p class="card__description">
                             Nuestro servidor de ER:LC está diseñado para ofrecerte una experiencia única y dinámica con sistemas completamente personalizados. 
@@ -431,9 +429,9 @@
                         </div>
                     </div>
         
-                    <div class="card">
-                        <img src="assets/img/staff.png"">
-                        <div class="card__content">
+                    <div class="card gray">
+                        <img loading="lazy" src="assets/img/staff.webp">
+                        <div class="card__content white">
                         <p class="card__title">Staff</p>
                         <p class="card__description">
                             Nuestro equipo de staff está formado por personas maduras y comprometidas, que están activas todo el día para 
@@ -449,12 +447,11 @@
         </div>
     </div>
 
-<footer>
+<footer class="gray">
     <p>&copy; 2025 [CA] Colombia ER:LC | MAIN. Todos los derechos reservados a CA hecho por la desarrolladora leyui</p>
 </footer>
 
 <!-- Scripts -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2992617549812829" crossorigin="anonymous"></script> 
 <script src="assets/js/config.js"></script> 
 <!-- <script src="assets/js/tema-pagina.js"></script> -->
 <!-- <script src="assets/js/halloween.js"></script> -->

@@ -1,7 +1,7 @@
 $(document).ready(function() {
     let batsHidden = localStorage.getItem('batsHidden') === 'true';
-    let bannerNormal = 'assets/img/BANNER4.png';
-    let bannerHalloween = 'assets/img/banner_halloween.png'; 
+    let bannerNormal = 'assets/img/BANNER4.webp';
+    let bannerHalloween = 'assets/img/banner_halloween.webp'; 
     let isHalloweenBanner = localStorage.getItem('isHalloweenBanner');
 
     if (isHalloweenBanner === null) {
@@ -11,7 +11,7 @@ $(document).ready(function() {
 
     // Inicializar el efecto de los murciélagos
     window.halloweenBats = $.halloweenBats({
-        image: 'assets/img/bats.png',
+        image: 'assets/img/bats.webp',
         amount: 20,
         width: 200,
         height: 20,

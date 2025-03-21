@@ -1,5 +1,5 @@
 // Avatars
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const users = [
         { id: '312978547', imgId: 'avatar1' }, 
         { id: '1413431128', imgId: 'avatar2' }, 
@@ -7,43 +7,19 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: '3599982581', imgId: 'avatar4' }
     ];
 
-    users.forEach(user => {
-        const avatarUrl = `https://cacolombia.com/avatar/${user.id}`; 
-        const imgElement = document.getElementById(user.imgId);
+    users.forEach(({ id, imgId }) => {
+        const imgElement = document.getElementById(imgId);
 
-        if (imgElement) {
-            imgElement.src = avatarUrl;
-
-            imgElement.onerror = function() {
-                console.error(`Error al cargar el avatar para el usuario con ID: ${user.id}`);
-            };
-        } else {
-            console.error(`No se encontró el elemento img con id: ${user.imgId}`);
+        if (!imgElement) {
+            console.error(`No se encontró el elemento img con id: ${imgId}`);
+            return;
         }
-    });
-});
 
-// Leer más
-function toggleTexto(boton) {
-    var texto = boton.previousElementSibling; 
-    var textoCompleto = texto.dataset.completo; 
+        imgElement.src = `https://cacolombia.com/avatar/${id}`;
 
-    if (boton.innerHTML === "Leer más") {
-        texto.innerHTML = textoCompleto; 
-        boton.innerHTML = "Leer menos";
-    } else {
-        texto.innerHTML = textoCompleto.substring(0, 50) + "..."; 
-        boton.innerHTML = "Leer más";
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    var textos = document.querySelectorAll('.empresa'); 
-    textos.forEach(function(texto) {
-        var textoCompleto = texto.dataset.completo; 
-        if (textoCompleto) {
-            texto.innerHTML = textoCompleto.substring(0, 50) + "...";
-        }
+        imgElement.onerror = () => {
+            console.error(`Error al cargar el avatar para el usuario con ID: ${id}`);
+        };
     });
 });
 
@@ -87,74 +63,53 @@ async function obtenerMiembros() {
 }
 obtenerMiembros();
 
-// Boton nav - Cambiar de sección
-var toggleButton = document.getElementById('toggleButton');
-if (toggleButton) {
-  toggleButton.addEventListener('click', function() {
-    var trabajosSection = document.getElementById('trabajos');
-    var empresasSection = document.getElementById('empresas');
-
-    if (trabajosSection.classList.contains('hidden')) {
-      trabajosSection.classList.remove('hidden');
-      empresasSection.classList.add('hidden');
-    } else {
-      trabajosSection.classList.add('hidden');
-      empresasSection.classList.remove('hidden');
-    }
-  });
-}
-
-
 // Dropdowns control
-document.addEventListener('click', function(event) {
-    var dropdown = document.getElementById("dd-header");
-    if (dropdown) {
-        var checkbox = document.querySelector(".menu input");
-        if (!event.target.closest('.menu') && !event.target.closest('.dd-header-contenido')) {
-            if (dropdown.classList.contains('show-dd')) {
-                dropdown.classList.remove('show-dd');
-                checkbox.checked = false;
-            }
+document.addEventListener('click', (event) => {
+    const dropdown = document.getElementById('dd-header');
+    const redeDropdown = document.getElementById('redes-dropdown');
+    const checkbox = document.querySelector('.menu input');
+    const redes = document.getElementById('redes');
+
+    if (dropdown && !event.target.closest('.menu') && !event.target.closest('.dd-header-contenido')) {
+        if (dropdown.classList.contains('show-dd')) {
+            dropdown.classList.remove('show-dd');
+            checkbox.checked = false;
         }
     }
-
-    var redeDropdown = document.getElementById("redes-dropdown");
-    if (redeDropdown) {
-        var redeCheckbox = document.querySelector(".menu input");
-        var redes = document.getElementById("redes");
-        if (!event.target.closest('.menu') && !event.target.closest('.redes-dropdown')) {
-            if (redeDropdown.classList.contains('show-redes')) {
-                redeDropdown.classList.remove('show-redes');
-                redes.classList.remove('active');
-                redeCheckbox.checked = false;
-            }
+    if (redeDropdown && !event.target.closest('.menu') && !event.target.closest('.redes-dropdown')) {
+        if (redeDropdown.classList.contains('show-redes')) {
+            redeDropdown.classList.remove('show-redes');
+            redes.classList.remove('active');
+            checkbox.checked = false;
         }
     }
 });
 
-// Header dropdown
 function toggleHeaderDD() {
-    var dropdown = document.getElementById("dd-header");
-    dropdown.classList.toggle("show-dd");
+    const dropdown = document.getElementById('dd-header');
+    dropdown?.classList.toggle('show-dd');
 }
 
-// Redes dropdown
 function toggleRedeDropdown() {
-    var dropdown = document.getElementById("redes-dropdown");
-    var redes = document.getElementById("redes");
-    dropdown.classList.toggle("show-redes");
-    redes.classList.toggle("active");
+    const dropdown = document.getElementById('redes-dropdown');
+    const redes = document.getElementById('redes');
+    dropdown?.classList.toggle('show-redes');
+    redes?.classList.toggle('active');
 }
-
 
 // Swiper
 document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.swiper-trabajos', {
+    function initializeSwiper(selector, paginationSelector, config) {
+        new Swiper(selector, {
+            ...config,
+            pagination: {
+                el: paginationSelector,
+                clickable: true,
+            },
+        });
+    }
+    const sharedConfig = {
         loop: true,
-        pagination: {
-            el: '.swiper-pagination-trabajos',
-            clickable: true,
-        },
         slidesPerView: 1,
         spaceBetween: 15,
         breakpoints: {
@@ -168,59 +123,32 @@ document.addEventListener('DOMContentLoaded', function () {
                 slidesPerView: 4,
             },
         },
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.swiper-empresas', {
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination-empresas',
-            clickable: true,
-        },
-        slidesPerView: 1,
-        spaceBetween: 15,
-        breakpoints: {
-            640: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4,
-            },
-        },
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.swiper-videos', {
+    };
+    const videosConfig = {
         loop: false,
-        pagination: {
-            el: '.swiper-pagination-videos',
-            clickable: true,
-        },
         slidesPerView: 1,
         spaceBetween: 25,
-    });
+    };
+
+    initializeSwiper('.swiper-trabajos', '.swiper-pagination-trabajos', sharedConfig);
+    initializeSwiper('.swiper-empresas', '.swiper-pagination-empresas', sharedConfig);
+    initializeSwiper('.swiper-videos', '.swiper-pagination-videos', videosConfig);
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+// Cambiar container trabajo / empresa
+document.addEventListener('DOMContentLoaded', () => {
     const trabajosHeader = document.querySelector('#trabajos h1');
     const empresasHeader = document.querySelector('#empresas h1');
     const trabajosContainer = document.getElementById('trabajos');
     const empresasContainer = document.getElementById('empresas');
 
     if (trabajosHeader && empresasHeader && trabajosContainer && empresasContainer) {
-        trabajosHeader.addEventListener('click', function () {
-            trabajosContainer.classList.add('hidden');
-            empresasContainer.classList.remove('hidden');
-        });
+        const toggleSections = (hide, show) => {
+            hide.classList.add('hidden');
+            show.classList.remove('hidden');
+        };
 
-        empresasHeader.addEventListener('click', function () {
-            empresasContainer.classList.add('hidden');
-            trabajosContainer.classList.remove('hidden');
-        });
+        trabajosHeader.addEventListener('click', () => toggleSections(trabajosContainer, empresasContainer));
+        empresasHeader.addEventListener('click', () => toggleSections(empresasContainer, trabajosContainer));
     }
 });
