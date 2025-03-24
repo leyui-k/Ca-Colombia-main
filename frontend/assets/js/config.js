@@ -152,3 +152,45 @@ document.addEventListener('DOMContentLoaded', () => {
         empresasHeader.addEventListener('click', () => toggleSections(empresasContainer, trabajosContainer));
     }
 });
+
+// API eventos
+async function fetchAllEventos() {
+    try {
+        const response = await fetch('http://127.0.0.1:3001/api/evento');
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const eventoContainer = document.getElementById('evento');
+        const existingEventCount = eventoContainer.querySelectorAll('.evento').length;
+
+        data.eventos.forEach((evento, index) => {
+            const newEventId = `e-${existingEventCount + index + 1}`;
+            if (document.getElementById(newEventId)) {
+                return; 
+            }
+
+            const eventBox = document.createElement('div');
+            eventBox.classList.add('evento');
+            eventBox.id = newEventId;
+
+            let content = `
+                <h3>${evento.titulo}</h3>
+                <p>Fecha: ${evento.htmlDate}</p>`;
+            if (evento.image) content += `<img loading="lazy" src="${evento.image}" alt="...">`;
+            if (evento.descripcion) content += `<p>${evento.descripcion}</p>`;
+            if (evento.requisitos) content += `<p><small>${evento.requisitos}</small></p>`;
+            content += `<a href="${evento.eventoURL}" target="_blank">Más información</a>`;
+
+            eventBox.innerHTML = content;
+            eventoContainer.appendChild(eventBox);
+        });
+    } catch (error) {
+        console.error('Error fetching eventos:', error.message);
+        console.error('Full Error:', error);
+        document.getElementById('evento').innerHTML += '<p>Error al cargar los eventos. Intenta nuevamente más tarde.</p>';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', fetchAllEventos);
