@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // API eventos
 async function fetchAllEventos() {
     try {
-        const response = await fetch('http://127.0.0.1:3001/api/evento');
+        const response = await fetch('https://cacolombia.com/api/evento');
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
         }
